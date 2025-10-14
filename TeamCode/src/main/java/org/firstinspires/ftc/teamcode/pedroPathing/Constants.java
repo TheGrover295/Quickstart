@@ -35,7 +35,7 @@ public class Constants {
 
     public static FollowerConstants followerConstants = new FollowerConstants()
             .centripetalScaling(0.00002)
-            .drivePIDFCoefficients(new FilteredPIDFCoefficients(0.01, 0, 0, 0.06, 0.1))
+            .drivePIDFCoefficients(new FilteredPIDFCoefficients(0.01, 0, 0, 0.06, 0.1)) // change back if needed
             .secondaryDrivePIDFCoefficients(new FilteredPIDFCoefficients(0, 0, 0, 0, 0))
             .headingPIDFCoefficients(new PIDFCoefficients(1, 0, 0.02, 0.1))
             .secondaryHeadingPIDFCoefficients(new PIDFCoefficients(2, 0, 0.05, 0.08))
