@@ -38,7 +38,7 @@ public class AutoTestV1 extends OpMode {
     private PathChain driveStartPosShootPos, driveGrabReadyPOS; // single path
 
 
-    public void buildPaths(){
+    public void buildPaths(){ //fix
         //put in coordinates for starting pose > ending pose
         driveStartPosShootPos = follower.pathBuilder()
                 .addPath(new BezierLine(startPose, shootPose))
