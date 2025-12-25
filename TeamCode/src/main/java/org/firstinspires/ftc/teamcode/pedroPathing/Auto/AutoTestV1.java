@@ -26,6 +26,7 @@ public class AutoTestV1 extends OpMode {
 
         DRIVE_GRABREADY
 
+
     }
 
     PathState pathState;
@@ -33,6 +34,7 @@ public class AutoTestV1 extends OpMode {
     private final Pose startPose = new Pose(20.629213483146067, 122.15730337078651, Math.toRadians(138));
     private final Pose shootPose = new Pose(48.13483146067416, 95.6629213483146, Math.toRadians(138));
     private final Pose grabreadyPose = new Pose(45.723320158102766, 83.47826086956522, Math.toRadians(180));
+    
 
 
     private PathChain driveStartPosShootPos, driveGrabReadyPOS; // single path
@@ -58,7 +60,7 @@ public class AutoTestV1 extends OpMode {
                 break;
             case SHOOT_PRELOAD:
                 //check is follower done its path?
-                if (!follower.isBusy() && pathTimer.getElapsedTimeSeconds() > 5) {
+                if (!follower.isBusy() /*&& pathTimer.getElapsedTimeSeconds() > 5*/) { // unremainder if needed
                     //TODO add logic to flyweel shooter
                     follower.followPath(driveStartPosShootPos, true);
                     setPathState(PathState.DRIVE_GRABREADY);
